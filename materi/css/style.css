@@ -1,0 +1,286 @@
+/* ===== Reset & Dasar ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #fafafa;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== Header ===== */
+.site-header {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: #fff;
+  padding: 15px 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Dark Mode Toggle Button */
+.btn-darkmode {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: url('https://source.unsplash.com/1600x900/?quran') no-repeat center center/cover;
+  min-height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-title {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-subtitle {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #ff6b6b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #ff4757;
+}
+
+/* ===== Materi Section ===== */
+.materi {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: #4e54c8;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.materi-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.materi-item {
+  background: #fefefe;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.materi-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.btn-secondary {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 2px solid #4e54c8;
+  border-radius: 50px;
+  color: #4e54c8;
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #4e54c8;
+  color: #fff;
+}
+
+/* ===== Content Section (di Halaman Materi) ===== */
+.content {
+  padding: 60px 0;
+}
+
+.content-text {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #333;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2em;
+  }
+  .hero-subtitle {
+    font-size: 1em;
+  }
+  .nav-list {
+    gap: 15px;
+  }
+}
+
+/* ===== Dark Mode Styles ===== */
+body.dark-mode {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .site-header {
+  background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+}
+
+body.dark-mode .nav-link::after {
+  background-color: #e0e0e0;
+}
+
+body.dark-mode .hero::before {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .btn {
+  background: #ffa502;
+}
+
+body.dark-mode .btn:hover {
+  background: #ff7f0e;
+}
+
+body.dark-mode .materi-item {
+  background: #2e2e2e;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .btn-secondary {
+  border-color: #ffa502;
+  color: #ffa502;
+}
+
+body.dark-mode .btn-secondary:hover {
+  background: #ffa502;
+  color: #fff;
+}
+
+body.dark-mode .site-footer {
+  background: #111;
+  color: #888;
+}
