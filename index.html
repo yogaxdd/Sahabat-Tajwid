@@ -5,24 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home - Sahabat Tajwid</title>
   <!-- Google Fonts & Icon -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-container">
-      <h1 class="logo">Sahabat Tajwid</h1>
-      <!-- <nav>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 6.25V8M12 10V16M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span>Sahabat Tajwid</span>
+      </a>
+      <nav>
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="idhar.html" class="nav-link">Idhar</a></li>
+          <li><a href="index.html" class="nav-link active">Beranda</a></li>
+          <li><a href="#materi" class="nav-link">Materi</a></li>
+          <li><a href="latihan.html" class="nav-link">Latihan</a></li>
+          <li><a href="tentang.html" class="nav-link">Tentang</a></li>
         </ul>
-      </nav> -->
-      <!-- <button id="darkModeBtn" class="btn-darkmode" title="Toggle Dark Mode">
-        <svg width="24" height="24" fill="currentColor">
-          <path d="M12 3.22a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V3.97A.75.75 0 0112 3.22zm5.657 2.343a.75.75 0 011.06 1.06l-1.06 1.06a.75.75 0 11-1.06-1.06l1.06-1.06zM12 6a6 6 0 100 12 6 6 0 000-12zm0 10.5a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75zm-5.657-1.343a.75.75 0 011.06 1.06l-1.06 1.06a.75.75 0 11-1.06-1.06l1.06-1.06zm-1.06-6.364a.75.75 0 010 1.06L4.222 9.97a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm1.06-3.536a.75.75 0 011.06 0l1.06 1.06a.75.75 0 11-1.06 1.06L6.343 4.06a.75.75 0 010-1.06zM12 19.03a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75z"/>
+      </nav>
+      <button id="darkModeBtn" class="btn-darkmode" title="Toggle Dark Mode">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3.22a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V3.97A.75.75 0 0112 3.22zm5.657 2.343a.75.75 0 011.06 1.06l-1.06 1.06a.75.75 0 11-1.06-1.06l1.06-1.06zM12 6a6 6 0 100 12 6 6 0 000-12zm0 10.5a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75zm-5.657-1.343a.75.75 0 011.06 1.06l-1.06 1.06a.75.75 0 11-1.06-1.06l1.06-1.06zm-1.06-6.364a.75.75 0 010 1.06L4.222 9.97a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm1.06-3.536a.75.75 0 011.06 0l1.06 1.06a.75.75 0 11-1.06 1.06L6.343 4.06a.75.75 0 010-1.06zM12 19.03a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75z" fill="currentColor"/>
         </svg>
-      </button> -->
+      </button>
     </div>
   </header>
 
@@ -30,8 +45,17 @@
     <section class="hero">
       <div class="container hero-content">
         <h2 class="hero-title">Selamat Datang di Sahabat Tajwid</h2>
-        <p class="hero-subtitle">Pelajari tata cara membaca Al-Quran dengan benar</p>
-        <a href="#materi" class="btn">Mulai Belajar</a>
+        <div class="arabic-text">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</div>
+        <p class="hero-subtitle">Pelajari tata cara membaca Al-Qur'an dengan benar sesuai kaidah tajwid</p>
+        <div class="hero-buttons">
+          <a href="#materi" class="btn btn-primary">Mulai Belajar</a>
+          <a href="latihan.html" class="btn btn-outline">Latihan Tajwid</a>
+        </div>
+        <div class="scroll-indicator">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
       </div>
     </section>
 
@@ -41,39 +65,110 @@
         <div class="materi-list">
           <div class="materi-item">
             <h3>Hukum Bacaan Nun/Mim Tasydid</h3>
-            <a href="pelajaran/nun-atau-mim-tasydid.html" class="btn btn-secondary">Pelajari Tajwid</a>
+            <div class="arabic-text">نّ مّ</div>
+            <p>Mempelajari cara membaca nun dan mim bertasydid dengan benar</p>
+            <a href="pelajaran/nun-atau-mim-tasydid.html" class="materi-link">
+              <span>Pelajari Tajwid</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
           </div>
+          
           <div class="materi-item">
-              <h3>Hukum Bacaan Nun Sukun / Tanwin</h3>
-              <a href="pelajaran/nun-sukun-atau-tanwin.html" class="btn btn-secondary">Pelajari Tajwid</a>
-            </div>
-            <div class="materi-item">
-                <h3>Hukum Idzhar Wajib</h3>
-                <a href="pelajaran/idzhar-wajib.html" class="btn btn-secondary">Pelajari Tajwid</a>
-            </div>
-            <div class="materi-item">
-              <h3>Hukum Bacaan Mim Sukun</h3>
-              <a href="pelajaran/mim-sukun.html" class="btn btn-secondary">Pelajari Tajwid</a>
-            </div>
+            <h3>Hukum Bacaan Nun Sukun / Tanwin</h3>
+            <div class="arabic-text">نْ ــًــٍــٌ</div>
+            <p>Mempelajari cara membaca nun sukun dan tanwin dengan benar</p>
+            <a href="pelajaran/nun-sukun-atau-tanwin.html" class="materi-link">
+              <span>Pelajari Tajwid</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+          
+          <div class="materi-item">
+            <h3>Hukum Idzhar Wajib</h3>
+            <div class="arabic-text">نْ ء ه ع ح غ خ</div>
+            <p>Mempelajari hukum bacaan idzhar wajib</p>
+            <a href="pelajaran/idzhar-wajib.html" class="materi-link">
+              <span>Pelajari Tajwid</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+          
+          <div class="materi-item">
+            <h3>Hukum Bacaan Mim Sukun</h3>
+            <div class="arabic-text">مْ</div>
+            <p>Mempelajari cara membaca mim sukun dengan benar</p>
+            <a href="pelajaran/mim-sukun.html" class="materi-link">
+              <span>Pelajari Tajwid</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+          
           <div class="materi-item">
             <h3>Hukum Idghom</h3>
-            <a href="pelajaran/idghom.html" class="btn btn-secondary">Pelajari Tajwid</a>
+            <div class="arabic-text">نْ ي ن م و ل ر</div>
+            <p>Mempelajari hukum bacaan idghom dalam Al-Quran</p>
+            <a href="pelajaran/idghom.html" class="materi-link">
+              <span>Pelajari Tajwid</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
           </div>
+          
           <div class="materi-item">
             <h3>Hukum Qolqolah</h3>
-            <a href="pelajaran/qolqolah.html" class="btn btn-secondary">Pelajari Tajwid</a>
+            <div class="arabic-text">ق ط ب ج د</div>
+            <p>Mempelajari hukum bacaan qolqolah dalam Al-Quran</p>
+            <a href="pelajaran/qolqolah.html" class="materi-link">
+              <span>Pelajari Tajwid</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
           </div>
+          
           <div class="materi-item">
             <h3>Hukum Lam Ta'Rif</h3>
-            <a href="pelajaran/lam-ta'rif.html" class="btn btn-secondary">Pelajari Tajwid</a>
+            <div class="arabic-text">ال</div>
+            <p>Mempelajari hukum bacaan lam ta'rif dalam Al-Quran</p>
+            <a href="pelajaran/lam-tarif.html" class="materi-link">
+              <span>Pelajari Tajwid</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
           </div>
+          
           <div class="materi-item">
             <h3>Hukum Lam Jalalah</h3>
-            <a href="pelajaran/lam-jalalah.html" class="btn btn-secondary">Pelajari Tajwid</a>
+            <div class="arabic-text">الله</div>
+            <p>Mempelajari hukum bacaan lam jalalah dalam Al-Quran</p>
+            <a href="pelajaran/lam-jalalah.html" class="materi-link">
+              <span>Pelajari Tajwid</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
           </div>
+          
           <div class="materi-item">
             <h3>Hukum Mad</h3>
-            <a href="pelajaran/mad.html" class="btn btn-secondary">Pelajari Tajwid</a>
+            <div class="arabic-text">ا و ي</div>
+            <p>Mempelajari berbagai hukum bacaan mad dalam Al-Quran</p>
+            <a href="pelajaran/mad.html" class="materi-link">
+              <span>Pelajari Tajwid</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -82,10 +177,40 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 Website Sahabat Tajwid by Yoga</p>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h3 class="footer-title">Sahabat Tajwid</h3>
+          <p>Website pembelajaran tajwid Al-Qur'an untuk membantu Anda membaca Al-Qur'an dengan benar sesuai kaidah tajwid.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3 class="footer-title">Tautan</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="materi.html">Materi</a></li>
+            <li><a href="latihan.html">Latihan</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3 class="footer-title">Sumber Belajar</h3>
+          <ul class="footer-links">
+            <li><a href="https://quran.com" target="_blank" rel="noopener noreferrer">Quran.com</a></li>
+            <li><a href="https://sunnah.com" target="_blank" rel="noopener noreferrer">Sunnah.com</a></li>
+            <li><a href="https://muslim.or.id" target="_blank" rel="noopener noreferrer">Muslim.or.id</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Website Sahabat Tajwid by Yoga</p>
+      </div>
     </div>
   </footer>
 
+  <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
