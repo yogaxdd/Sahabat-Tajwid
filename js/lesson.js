@@ -255,6 +255,24 @@ document.addEventListener('DOMContentLoaded', function() {
             message = 'Kurang tepat. Coba periksa kembali hurufnya.';
           }
           break;
+
+        case 'nun-tasydid':
+          if (answer === 'nun-tasydid') {
+            isCorrect = true;
+            message = 'Benar! Ini adalah Nun Tasydid karena pada kata "إِنَّ" yang mengandung nun dengan tanda syaddah.'
+          } else {
+            message = 'Kurang tepat. Coba periksa kembali hurufnya.';
+          }
+          break;
+        
+        case 'mim-tasydid':
+          if (answer === 'mim-tasydid') {
+            isCorrect = true;
+            message = 'Benar! Ini adalah Mim Tasydid karena terdapat pada huruf م di kata عَمَّ. Jadi, ini merupakan mim tasydid, bukan nun tasydid.'
+          } else {
+            message = 'Kurang tepat. Coba periksa kembali hurufnya.';
+          }
+          break;
           
         default:
           message = 'Tipe soal tidak dikenali. Silahkan coba lagi.';

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Latihan Tajwid - Sahabat Tajwid</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <span>Sahabat Tajwid</span>
+      </a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Beranda</a></li>
+          <li><a href="index.html#materi" class="nav-link">Materi</a></li>
+          <li><a href="latihan.html" class="nav-link">Latihan</a></li>
+          <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+        </ul>
+      </nav>
+      <button id="darkModeBtn" class="btn-darkmode" title="Toggle Dark Mode">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 3.22a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V3.97A.75.75 0 0112 3.22zm5.657 2.343a.75.75 0 011.06 1.06l-1.06 1.06a.75.75 0 11-1.06-1.06l1.06-1.06zM12 6a6 6 0 100 12 6 6 0 000-12zm0 10.5a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75zm-5.657-1.343a.75.75 0 011.06 1.06l-1.06 1.06a.75.75 0 11-1.06-1.06l1.06-1.06zm-1.06-6.364a.75.75 0 010 1.06L4.222 9.97a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm1.06-3.536a.75.75 0 011.06 0l1.06 1.06a.75.75 0 11-1.06 1.06L6.343 4.06a.75.75 0 010-1.06zM12 19.03a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75z"/>
+        </svg>
+      </button>
+      <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="latihan-page">
+    <div class="latihan-header">
+      <div class="container">
+        <h1 class="latihan-title">Latihan Tajwid</h1>
+        <p class="latihan-description">Uji kemampuan tajwid Anda dengan berbagai soal latihan interaktif</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="latihan-controls">
+        <div class="filter-container">
+          <label for="categoryFilter">Pilih Kategori Tajwid:</label>
+          <select id="categoryFilter" class="filter-select">
+            <option value="all">Semua Hukum Tajwid</option>
+            <option value="nun-atau-mim-tasydid">Nun/Mim Tasydid</option>
+            <option value="nun-sukun-atau-tanwin">Nun Sukun/Tanwin</option>
+            <option value="idzhar-wajib">Idzhar Wajib</option>
+            <option value="idghom">Idghom</option>
+            <option value="mim-sukun">Mim Sukun</option>
+            <option value="qolqolah">Qolqolah</option>
+            <option value="lam-tarif">Lam Ta'rif</option>
+            <option value="lam-jalalah">Lam Jalalah</option>
+            <option value="mad">Mad</option>
+          </select>
+        </div>
+        <div class="difficulty-container">
+          <label for="difficultyFilter">Tingkat Kesulitan:</label>
+          <select id="difficultyFilter" class="filter-select">
+            <option value="all">Semua Tingkat</option>
+            <option value="easy">Mudah</option>
+            <option value="medium">Sedang</option>
+            <option value="hard">Sulit</option>
+          </select>
+        </div>
+        <button id="startQuizBtn" class="btn btn-primary">Mulai Latihan</button>
+      </div>
+
+      <div class="quiz-container" id="quizContainer">
+        <div id="quizIntro" class="quiz-intro active">
+          <h2>Selamat Datang di Latihan Tajwid</h2>
+          <p>Pilih kategori dan tingkat kesulitan, lalu klik "Mulai Latihan" untuk memulai.</p>
+          <!-- <div class="intro-image">
+            <img src="public/placeholder.svg" alt="Ilustrasi Latihan Tajwid" width="300">
+          </div> -->
+        </div>
+
+        <div id="quizContent" class="quiz-content">
+          <div class="quiz-progress">
+            <div class="progress-text">Soal <span id="currentQuestionNum">0</span> dari <span id="totalQuestions">0</span></div>
+            <div class="progress-bar">
+              <div id="progressBarFill" class="progress-bar-fill"></div>
+            </div>
+          </div>
+
+          <div id="questionContainer" class="question-container">
+            <!-- Questions will be inserted here by JavaScript -->
+          </div>
+
+          <div class="quiz-navigation">
+            <button id="prevQuestionBtn" class="quiz-nav-btn" disabled>
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+              Sebelumnya
+            </button>
+            <button id="nextQuestionBtn" class="quiz-nav-btn" disabled>
+              Selanjutnya
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <button id="finishQuizBtn" class="quiz-nav-btn btn-primary" style="display: none;">
+              Selesai
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="quizResults" class="quiz-results">
+          <h2>Hasil Latihan</h2>
+          <div class="results-summary">
+            <div class="result-circle">
+              <div class="result-number"><span id="correctAnswers">0</span>/<span id="totalAnswers">0</span></div>
+              <div class="result-label">Jawaban Benar</div>
+            </div>
+            <div class="result-percentage">
+              <span id="scorePercentage">0%</span>
+            </div>
+          </div>
+          <div id="resultsFeedback" class="results-feedback"></div>
+          <div id="resultsDetails" class="results-details">
+            <!-- Results details will be inserted here by JavaScript -->
+          </div>
+          <div class="results-actions">
+            <button id="retryQuizBtn" class="btn btn-primary">Ulangi Latihan</button>
+            <button id="newQuizBtn" class="btn btn-outline">Latihan Baru</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="audioPlayer" class="audio-player">
+    <div class="audio-player-content">
+      <h3 id="audioTitle" class="audio-title">Audio Contoh</h3>
+      <audio id="audioElement" controls>
+        <source src="" type="audio/mpeg">
+        Browser Anda tidak mendukung pemutaran audio.
+      </audio>
+      <button id="closeAudioBtn" class="close-audio-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h3 class="footer-title">Sahabat Tajwid</h3>
+          <p>Platform pembelajaran tajwid Al-Qur'an untuk membantu Anda membaca Al-Qur'an dengan benar dan sesuai kaidah.</p>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title">Materi</h3>
+          <ul class="footer-links">
+            <li><a href="pelajaran/nun-atau-mim-tasydid.html">Nun/Mim Tasydid</a></li>
+            <li><a href="pelajaran/nun-sukun-atau-tanwin.html">Nun Sukun/Tanwin</a></li>
+            <li><a href="pelajaran/mim-sukun.html">Mim Sukun</a></li>
+            <li><a href="pelajaran/qolqolah.html">Qolqolah</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title">Lainnya</h3>
+          <ul class="footer-links">
+            <li><a href="pelajaran/lam-tarif.html">Lam Ta'rif</a></li>
+            <li><a href="pelajaran/lam-jalalah.html">Lam Jalalah</a></li>
+            <li><a href="pelajaran/mad.html">Mad</a></li>
+            <li><a href="latihan.html">Latihan</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sahabat Tajwid. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/latihan.js"></script>
+</body>
+</html>
