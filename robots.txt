@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://sahabat-tajwid.vercel.app/sitemap.xml
